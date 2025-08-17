@@ -233,7 +233,23 @@ Plaid hell of cred microdosing, succulents tilde pour-over. Offal shabby chic 3 
 
 Stumptown PBR&B keytar plaid street art, forage XOXO pitchfork selvage affogato green juice listicle pickled everyday carry hashtag. Organic sustainable letterpress sartorial scenester intelligentsia swag bushwick. Put a bird on it stumptown neutra locavore. IPhone typewriter messenger bag narwhal. Ennui cold-pressed seitan flannel keytar, single-origin coffee adaptogen occupy yuccie williamsburg chillwave shoreditch forage waistcoat.
 
+### Mermaid example
 
+```mermaid
+sequenceDiagram
+    autonumber
+    Docsy user->>Discussion board: Ask question
+    Discussion board->>Community member: read question
+    loop Different strategies
+    Community member->>Test instance: Investigate issue raised
+    end
+    Note right of Community member: After hours of investigation:
+    Test instance-->>Community member: Come up with solution
+    Community member-->>Discussion board: Propose solution
+    Discussion board-->>Docsy user: check proposed solution
+    Docsy user->>Discussion board: Mark question as resolved
+    Docsy user->>Docsy user: Being happy
+```
 
 ```
 This is the final element on the page and there should be no margin below this.
