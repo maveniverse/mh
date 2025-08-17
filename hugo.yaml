@@ -46,9 +46,9 @@ imaging:
 languages:
   en:
     languageName: English
-    title: Goldydocs
+    title: The Maven Handbook
     params:
-      description: A Docsy example site
+      description: A book for Maven users.
   # cSpell:disable
   'no':
     languageName: Norsk
