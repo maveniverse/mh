@@ -1,6 +1,6 @@
 ---
-title: TechOS-Dokumentasjon
-linkTitle: Dokumentasjon
+title: Håndbogen
+linkTitle: Håndbogen
 menu:
   main:
     weight: 20
