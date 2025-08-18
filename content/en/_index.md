@@ -13,8 +13,7 @@ title: The Maven Handbook
 
 {{% blocks/lead color="primary" %}}
 This book is authored as community effort and is built as site using the [Docsy](https://github.com/google/docsy)
-Hugo theme and plain Markdown for content. 
-<br/>It’s designed to ease collaboration on it.
+Hugo theme and plain Markdown for content. It’s designed to ease collaboration on it.
 {{% /blocks/lead %}}
 
 

@@ -13,8 +13,7 @@ title: Maven-håndbogen
 
 {{% blocks/lead color="primary" %}}
 Denne bog er forfattet som et fællesskabsinitiativ og er bygget som et websted ved hjælp af [Docsy](https://github.com/google/docsy)
-Hugo-temaet og almindelig Markdown for indhold.
-<br/>Den er designet til at lette samarbejdet om den.
+Hugo-temaet og almindelig Markdown for indhold. Den er designet til at lette samarbejdet om den.
 {{% /blocks/lead %}}
 
 
