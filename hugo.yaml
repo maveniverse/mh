@@ -58,6 +58,14 @@ languages:
       description: En bog for Maven-brugere.
       time_format_default: 02.01.2006
       time_format_blog: 02.01.2006
+  fr:
+    languageName: Française
+    contentDir: content/fr
+    title: Le manuel Maven
+    params:
+      description: Un livre pour les utilisateurs de Maven.
+      time_format_default: 02.01.2006
+      time_format_blog: 02.01.2006
   # cSpell:enable
 
 markup:
