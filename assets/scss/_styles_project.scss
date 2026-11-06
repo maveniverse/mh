@@ -1,0 +1,46 @@
+/* Fix dark mode code rendering */
+.highlight pre {
+  background-color: var(--td-pre-bg) !important;
+}
+
+
+
+/* Site title and cover headings in the logo wordmark weight */
+.td-navbar .navbar-brand__name,
+.td-cover-block h1 {
+  font-weight: 640;
+}
+
+/* Homepage cover: the amber "missing piece" planet drifts along with scroll.
+   ponytail: CSS scroll-driven animation; browsers without it show a static planet. */
+.td-cover-block {
+  overflow: hidden; // keep the drifting planet inside short covers (About)
+}
+
+.mvn-planet {
+  position: absolute;
+  top: 1rem;
+  right: 2rem;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 35% 35%, #ffd08a, #ffb347 55%, #e08a1e);
+  box-shadow: 0 0 24px rgba(255, 179, 71, 0.6);
+  pointer-events: none;
+}
+
+@supports (animation-timeline: scroll()) {
+  @media (prefers-reduced-motion: no-preference) {
+    .mvn-planet {
+      animation: mvn-planet-drift linear both;
+      animation-timeline: scroll(root);
+      animation-range: 0 100vh;
+    }
+  }
+}
+
+@keyframes mvn-planet-drift {
+  to {
+    transform: translate(-45vw, 60vh) scale(1.8);
+  }
+}

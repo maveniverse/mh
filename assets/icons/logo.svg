@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="t">
+  <title id="t">Maveniverse</title>
+  <defs>
+    <linearGradient id="space" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#2b2468"/>
+      <stop offset="1" stop-color="#0f1033"/>
+    </linearGradient>
+    <!-- coordinates of the orbit group, before its rotation -->
+    <linearGradient id="orbitFront" gradientUnits="userSpaceOnUse" x1="52" y1="0" x2="460" y2="0">
+      <stop offset="0" stop-color="#3fd0c9"/>
+      <stop offset="1" stop-color="#7b8cff"/>
+    </linearGradient>
+    <linearGradient id="orbitBack" gradientUnits="userSpaceOnUse" x1="52" y1="0" x2="460" y2="0">
+      <stop offset="0" stop-color="#3fd0c9"/>
+      <stop offset=".5" stop-color="#5c7fe0" stop-opacity=".32"/>
+      <stop offset="1" stop-color="#7b8cff"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="512" height="512" rx="112" fill="url(#space)"/>
+
+  <g fill="#cfd4ff">
+    <circle cx="96" cy="112" r="5" opacity=".9"/>
+    <circle cx="420" cy="96" r="4" opacity=".7"/>
+    <circle cx="404" cy="436" r="4.5" opacity=".8"/>
+    <circle cx="296" cy="62" r="3" opacity=".6"/>
+  </g>
+
+  <!-- back half of the orbit, passes behind the M and fades out -->
+  <g transform="rotate(-24 256 256)" fill="none" stroke="url(#orbitBack)" stroke-width="18">
+    <path d="M52.50 261.30 A204 76 0 1 1 459.50 261.30"/>
+  </g>
+
+  <!-- the M: two peaks -->
+  <path d="M158 334 V192 L256 286 L354 192 V334" fill="none" stroke="#fff7e8" stroke-width="48"
+        stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- front half of the orbit, passes in front of the M, with a gap for the missing piece -->
+  <g transform="rotate(-24 256 256)" fill="none" stroke="url(#orbitFront)" stroke-width="18">
+    <path d="M459.50 250.70 A204 76 0 0 1 111.75 309.74"/>
+    <path d="M58.95 275.67 A204 76 0 0 1 52.50 250.70"/>
+  </g>
+
+  <!-- the missing piece, floating next to the gap it will click into -->
+  <g transform="translate(105.3 393.2) rotate(-157.2)">
+    <rect x="-24" y="-24" width="48" height="48" rx="10" fill="#ffb347"/>
+  </g>
+</svg>

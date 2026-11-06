@@ -1,4 +1,4 @@
-baseURL: https://book.maveniverse.eu
+baseURL: https://book.maveniverse.eu/
 title: The Maven Handbook
 
 # cSpell:ignore goldmark github hugo readingtime docsy subdir lastmod pygments linenos catmullrom norsk gu
@@ -15,8 +15,8 @@ enableRobotsTXT: true
 # Will give values to .Lastmod etc.
 enableGitInfo: true
 
-# Comment out to disable taxonomies in Docsy
-# disableKinds: [taxonomy]
+# Comment out to enable taxonomies in Docsy
+# disableKinds: [taxonomy, taxonomyTerm]
 
 # You can add your own taxonomies
 taxonomies:
@@ -39,19 +39,22 @@ permalinks:
 # Image processing configuration.
 imaging:
   resampleFilter: CatmullRom
-  quality: 75
+  jpeg:
+    quality: 75
+  webp:
+    quality: 75
   anchor: smart
 
 # Language configuration
 languages:
   en:
-    languageName: English
+    label: English
     title: The Maven Handbook
     params:
       description: A book for Maven users.
   # cSpell:disable
   da:
-    languageName: Dansk
+    label: Dansk
     contentDir: content/da
     title: Maven-håndbogen
     params:
@@ -59,7 +62,7 @@ languages:
       time_format_default: 02.01.2006
       time_format_blog: 02.01.2006
   fr:
-    languageName: Française
+    label: Française
     contentDir: content/fr
     title: Le manuel Maven
     params:
@@ -144,11 +147,12 @@ params:
   prism_syntax_highlighting: false
 
   copyright:
-    authors: Maveniverse Authors | [CC BY 4.0](https://creativecommons.org/licenses/by/4.0) |
+    authors: Maveniverse Team | [CC BY 4.0](https://creativecommons.org/licenses/by/4.0) | [Apache Maven](https://maven.apache.org/) is a trademark of Apache Software Foundation |
     from_year: 2025
 
   # User interface configuration
   ui:
+    # light/dark menu
     showLightDarkModeMenu: true
     # Set to true to disable breadcrumb navigation.
     breadcrumb_disable: false
@@ -157,7 +161,7 @@ params:
     # Set to true if you don't want the top navbar to be translucent when over a `block/cover`, like on the homepage.
     navbar_translucent_over_cover_disable: false
     # Enable to show the side bar menu in its compact state.
-    sidebar_menu_compact: false
+    sidebar_menu_compact: true
     # Set to true to hide the sidebar search box (the top nav search box will still be displayed if search is enabled)
     sidebar_search_disable: false
 
@@ -207,11 +211,11 @@ params:
         desc: Discuss development issues around the project
 
 module:
-  # Uncomment the next line to build and serve using local docsy clone declared in the named Hugo workspace:
-  # workspace: docsy.work
+  proxy: direct
   hugoVersion:
     extended: true
-    min: 0.146.0
+    min: 0.160.1
   imports:
-    - path: github.com/google/docsy
+    - path: github.com/docsy/docsy/theme
       disable: false
+
